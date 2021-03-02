@@ -6,7 +6,7 @@ altura = float(input("Ingrese su altura actual: "))
 imc = round(peso / (altura **2))
 
 if imc <= 18.5:
-    print("Cuidado tiene bajo peso")
+    print(f"Cuidado tu {imc} representa que tienes bajo peso")
 elif imc > 18.5 and imc < 25:
     print("Su peso es normal")
 elif imc > 25 and imc < 30:
