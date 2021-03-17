@@ -25,7 +25,7 @@ def calculo_amor(nombre, nombre2):
     total_puntaje = str(total_true)+str(total_love)
     return total_puntaje
 
-
+#Ejecutamos el analisis
 puntaje_amor = calculo_amor(nombre1, nombre2)
 puntaje_amor = int(puntaje_amor)
 if puntaje_amor < 10 or puntaje_amor > 90:
