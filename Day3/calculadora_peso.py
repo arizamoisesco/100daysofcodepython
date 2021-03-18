@@ -14,4 +14,5 @@ elif imc > 25 and imc < 30:
 elif imc > 30 and imc < 35:
     print("Cuidado ya esta obeso")
 else:
-    print("Estas muy obeso ve al doctor que te puedes morir")
+    print("Estas en un peso riesgoso para tu salud")
+
