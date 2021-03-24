@@ -2,12 +2,12 @@
 
 for numero in range(1, 101):
     
-    if numero % 3 == 0:
+    if numero % 3 == 0 and numero % 5 == 0:
+        print("FizzBuzz")
+    elif numero % 3 == 0:
         print("Fizz")
     elif numero % 5 == 0:
         print("Buzz")
-    elif numero % 15 == 0:
-        print("FizzBuzz")
     else:
         print(numero)
 #Verificamos si son divisibles por 3, si es el caso lanzar un menzaje que diga "fizz"
