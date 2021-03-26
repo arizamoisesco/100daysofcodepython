@@ -19,7 +19,7 @@ for i in range(0, cantidad_letras):
     print(f'Letra aleatorio: {letra_aleatoria}')
     contraseña += letras[letra_aleatoria]
 
-for i in range(1, cantidad_simbolos):
+for i in range(0, cantidad_simbolos):
     simbolo_aleatorio =  random.randint(0, len(simbolos)-1) 
     print(f'símbolo aleatorio: {simbolo_aleatorio}') 
     contraseña += simbolos[simbolo_aleatorio]
