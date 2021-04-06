@@ -16,10 +16,12 @@ print(espacio_blanco)
 letra_usuario = input("Ingrese la letra: ").lower()
 
 #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
-for letras in palabra_aleatoria:
-    if letras == letra_usuario:
-        indice = palabra_aleatoria.index(letras)
-        espacio_blanco[indice] = letras
-        print(espacio_blanco)
-    else:
-        print("Mal")
+for posicion in range(len(palabra_aleatoria)):
+    letra = palabra_aleatoria[posicion]
+    print(letra)
+    if letra == letra_usuario:
+        espacio_blanco[posicion] = letra
+        
+   # else:
+   #     print("Mal")
+print(espacio_blanco)
