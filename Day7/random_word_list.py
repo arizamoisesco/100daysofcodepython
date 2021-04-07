@@ -12,10 +12,10 @@ for palabra in palabra_aleatoria:
     espacio_blanco.append("_")
 
 print(espacio_blanco)
-cantidad_caracteres = len(palabra_aleatoria)
-contador = 0
+#cantidad_caracteres = len(palabra_aleatoria)
+fin_juego = False
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-while not contador >= cantidad_caracteres:
+while not fin_juego == True:
     letra_usuario = input("Ingrese la letra: ").lower()
 
     #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
@@ -27,7 +27,9 @@ while not contador >= cantidad_caracteres:
         
     print(espacio_blanco)
     
-    contador += 1 
+    if "_" not in espacio_blanco:
+        fin_juego = True
+
    # else:
    #     print("Mal")
 print("Tu ganas")
