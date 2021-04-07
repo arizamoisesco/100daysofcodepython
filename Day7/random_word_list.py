@@ -12,16 +12,22 @@ for palabra in palabra_aleatoria:
     espacio_blanco.append("_")
 
 print(espacio_blanco)
+cantidad_caracteres = len(palabra_aleatoria)
+contador = 0
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-letra_usuario = input("Ingrese la letra: ").lower()
+while not contador >= cantidad_caracteres:
+    letra_usuario = input("Ingrese la letra: ").lower()
 
-#TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
-for posicion in range(len(palabra_aleatoria)):
-    letra = palabra_aleatoria[posicion]
-    print(letra)
-    if letra == letra_usuario:
-        espacio_blanco[posicion] = letra
+    #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
+    for posicion in range(len(palabra_aleatoria)):
+        letra = palabra_aleatoria[posicion]
         
+        if letra == letra_usuario:
+            espacio_blanco[posicion] = letra
+        
+    print(espacio_blanco)
+    
+    contador += 1 
    # else:
    #     print("Mal")
-print(espacio_blanco)
+print("Tu ganas")
