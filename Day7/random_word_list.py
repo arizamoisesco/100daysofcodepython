@@ -32,4 +32,4 @@ while not fin_juego == True:
 
    # else:
    #     print("Mal")
-print("Tu ganas  :D")
+print("Tu ganas")
