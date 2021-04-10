@@ -1,5 +1,62 @@
 #Step 1 
 import random
+estados = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 word_list = ["aardvark", "baboon", "camel"]
 
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
@@ -14,6 +71,7 @@ for palabra in palabra_aleatoria:
 print(espacio_blanco)
 #cantidad_caracteres = len(palabra_aleatoria)
 fin_juego = False
+oportunidad = 6
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
 while not fin_juego == True:
     letra_usuario = input("Ingrese la letra: ").lower()
@@ -24,7 +82,16 @@ while not fin_juego == True:
         
         if letra == letra_usuario:
             espacio_blanco[posicion] = letra
-        
+            
+        print(estados[oportunidad])
+        '''    
+        else:
+            oportunidad -= 1
+            if(oportunidad == 0):
+                fin_juego = True
+                print("Perdiste")
+        '''        
+
     print(espacio_blanco)
     
     if "_" not in espacio_blanco:
