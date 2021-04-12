@@ -78,25 +78,29 @@ while not fin_juego == True:
 
     #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
     for posicion in range(len(palabra_aleatoria)):
+        
         letra = palabra_aleatoria[posicion]
         
         if letra == letra_usuario:
-            espacio_blanco[posicion] = letra
+          print(estados[oportunidad])
+          espacio_blanco[posicion] = letra
+
+    if letra_usuario not in palabra_aleatoria:
+
+      oportunidad -= 1
+      print(estados[oportunidad])
+      if oportunidad == 0:
+        fin_juego = True
+        print("Lo siento perdiste")     
+
+        
             
-        print(estados[oportunidad])
-        '''    
-        else:
-            oportunidad -= 1
-            if(oportunidad == 0):
-                fin_juego = True
-                print("Perdiste")
-        '''        
 
     print(espacio_blanco)
     
     if "_" not in espacio_blanco:
         fin_juego = True
+        print("Tu ganas")
 
    # else:
    #     print("Mal")
-print("Tu ganas")
