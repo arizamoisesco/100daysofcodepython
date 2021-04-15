@@ -29,13 +29,16 @@ while not fin_juego == True:
     for posicion in range(len(palabra_aleatoria)):
         
         letra = palabra_aleatoria[posicion]
-        
-        if letra == letra_usuario:
-          print(estados[oportunidad])
-          espacio_blanco[posicion] = letra
+
+        if letra in espacio_blanco:
+          print("Ya usaste esta letra")
+        else:
+          if letra == letra_usuario:
+            print(estados[oportunidad])
+            espacio_blanco[posicion] = letra
 
     if letra_usuario not in palabra_aleatoria:
-
+      print("Lo siento haz perdido una vida")
       oportunidad -= 1
       print(estados[oportunidad])
       if oportunidad == 0:
