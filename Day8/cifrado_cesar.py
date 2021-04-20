@@ -8,9 +8,15 @@ shift = int(input("Type the shift number:\n"))
 def encrypt(text, shift):
     text_encode = ""
     position_alphabet = 0
+    len_alphabet = len(alphabet)-1
     for index, letter in enumerate(text):
         position_alphabet  = alphabet.index(letter) + shift
+
+        if position_alphabet > len_alphabet:
+            position_alphabet = 0
+
         text_encode += alphabet[position_alphabet]
+
     print(f"EL mensaje códificado es: {text_encode}")
 
 encrypt(text, shift)
