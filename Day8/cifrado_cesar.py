@@ -9,7 +9,7 @@ def encrypt(text, shift):
     text_encode = ""
     position_alphabet = 0
     len_alphabet = len(alphabet)-1
-    for index, letter in enumerate(text):
+    for letter in text:
         position_alphabet  = alphabet.index(letter) + shift
 
         if position_alphabet > len_alphabet:
