@@ -19,7 +19,26 @@ def encrypt(text, shift):
 
     print(f"EL mensaje códificado es: {text_encode}")
 
-encrypt(text, shift)
+def decrypt(text, shift):
+    text_decode = ""
+    position_alphabet = 0
+    len_alphabet = len(alphabet)-1
+    for letter in text:
+        position_alphabet  = alphabet.index(letter) - shift
+
+        if position_alphabet > len_alphabet:
+            position_alphabet = 0
+
+        text_decode += alphabet[position_alphabet]
+
+    print(f"EL mensaje cifrado es: {text_decode}")
+
+
+
+if(direction == 'encode'):  
+    encrypt(text, shift)
+elif(direction == 'decode'):
+    decrypt(text, shift)
 
     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
     #e.g. 
