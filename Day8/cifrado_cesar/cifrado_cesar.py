@@ -6,16 +6,22 @@ def ceaser(text, shift, direction):
     text_plan = ""
     position_alphabet = 0
     len_alphabet = len(alphabet)-1
-    for letter in text:
+    for char in text:
         if direction == "encode":
-            position_alphabet  = alphabet.index(letter) + shift
+            if char in alphabet:
+                position_alphabet  = alphabet.index(char) + shift
+
         elif direction == "decode":
-            position_alphabet  = alphabet.index(letter) - shift
+            if char in alphabet:
+                position_alphabet  = alphabet.index(char) - shift
     
         if position_alphabet > len_alphabet:
             position_alphabet = 0
 
-        text_plan += alphabet[position_alphabet]
+        if char in alphabet:
+            text_plan += alphabet[position_alphabet]
+        else:
+            text_plan += char
     print(f"The message {direction}d is {text_plan}")
 
 option_continue = "yes"
@@ -27,6 +33,6 @@ while(option_continue == "yes"):
     ceaser(text, shift, direction)
     option_continue = input("Are you want continue yes or no?")
 
-
+print("Thanks for used me")
 
     
