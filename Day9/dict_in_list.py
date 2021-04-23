@@ -22,3 +22,4 @@ def add_new_country(pais, cant_visit, lugares):
     })
 
 add_new_country("Colombia",2, ["Caldas", "Bogota"])
+print(travel_log)
