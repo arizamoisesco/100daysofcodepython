@@ -1,4 +1,4 @@
-
+from art import logo
 #Add
 def add(n1, n2):
     return n1 + n2
@@ -22,8 +22,10 @@ operations = {"+":add,
              "/":divide
 }
 
-def calculator():     
-    num1 = int(input("¿Cual es el primer número?: "))
+def calculator():    
+    print(logo)
+
+    num1 = float(input("¿Cual es el primer número?: "))
 
     print("¿Qué operación desea realizar?: ")
     for key in operations:
@@ -34,7 +36,7 @@ def calculator():
     while option_continue:
         operation_symbol = input("Ingrese el simbolo de la operación que desea realizar: ")
 
-        num2 = int(input("¿Cual es el siguiente número?: "))
+        num2 = float(input("¿Cual es el siguiente número?: "))
 
         select_operation = operations[operation_symbol]
         answer = select_operation(num1, num2)
